@@ -88,7 +88,23 @@ body {
 
 .section h2 {
   font-size: 2.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  color: #ccc;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* CARDS */
@@ -122,20 +138,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* FOOTER */
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #000;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-.section-subtitle {
-  color: #bbb;
-  margin-bottom: 40px;
-}
-
 /* CLIENTS */
 .client-cards {
   display: flex;
@@ -165,3 +167,11 @@ footer {
   font-style: italic;
 }
 
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  font-size: 0.9rem;
+  color: #aaa;
+}
