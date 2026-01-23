@@ -1,110 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>ASJ ASSOCIATES Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>ASJ Associates | Consulting & Technology Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ASJ Associates delivers business intelligence, web services, and IT consulting solutions.">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">ASJ<span>Solutions</span></div>
-    <a href="#contact" class="btn">Contact</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Innovative Solutions for a <span>Smarter Future</span></h1>
-      <p>
-        Empowering businesses with tailored consulting, technology,
-        and process optimization solutions.
-      </p>
-      <a href="#services" class="btn btn-primary">Explore Services</a>
+  <div class="navbar">
+    <div class="logo">ASJ <span>Associates</span></div>
+    <div class="nav-links">
+      <a onclick="openTab('about')">About</a>
+      <a onclick="openTab('services')">Services</a>
+      <a onclick="openTab('certifications')">Certifications</a>
+      <a onclick="openTab('clients')">Clients</a>
+      <a onclick="openTab('contact')">Contact</a>
     </div>
-  </section>
+  </div>
 
-  <!-- ABOUT US -->
-  <section class="section" id="about">
-    <h2>About Us</h2>
-    <p class="section-subtitle">Who we are and what drives us</p>
-    <p class="about-text">
-      ASJ ASSOCIATES Solutions is a forward-thinking consulting and
-      technology firm dedicated to helping organizations adapt,
-      innovate, and thrive in a rapidly evolving digital landscape.
-      We deliver strategic insight, technical excellence, and
-      measurable results.
-    </p>
-  </section>
+  <!-- MAIN CONTAINER -->
+  <div class="container">
 
-  <!-- MISSION -->
-  <section class="section dark" id="mission">
-    <h2>Our Mission</h2>
-    <p>
-      To offer exceptional solutions that empower businesses to grow
-      and succeed in a competitive landscape.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <h2>What We Offer</h2>
-    <div class="cards">
-      <div class="card">Custom Consulting Services</div>
-      <div class="card">Technology Integration & Support</div>
-      <div class="card">Business Process Optimization</div>
-      <div class="card">Industry-Specific Solutions</div>
+    <!-- ABOUT TAB -->
+    <div id="about" class="tab active">
+      <div class="section-box">
+        <h2>About ASJ Associates</h2>
+        <p>
+          ASJ Associates is a consulting and technology firm delivering innovative IT services, business intelligence,
+          and digital transformation solutions. We help organizations modernize, scale, and succeed with secure,
+          reliable, and scalable systems.
+        </p>
+      </div>
     </div>
-  </section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="section dark" id="why">
-    <h2>Why Choose Us?</h2>
-    <ul class="reasons">
-      <li>✔ Experienced & Dedicated Team</li>
-      <li>✔ Proven Track Record of Success</li>
-      <li>✔ Client-Focused Approach</li>
-      <li>✔ Innovative & Customized Solutions</li>
-    </ul>
-  </section>
-
-  <!-- CLIENTS -->
-  <section class="section" id="clients">
-    <h2>Our Clients</h2>
-    <p class="section-subtitle">
-      Trusted by organizations that value innovation and excellence.
-    </p>
-    <div class="client-cards">
-      <div class="client-card">ALTA IT Services</div>
-      <div class="client-card coming">More Clients Coming Soon</div>
+    <!-- SERVICES TAB -->
+    <div id="services" class="tab">
+      <div class="section-box">
+        <h2>Services</h2>
+        <div class="cards">
+          <div class="card">Business Intelligence</div>
+          <div class="card">Web Services</div>
+          <div class="card">Technology Integration</div>
+          <div class="card">IT Consulting</div>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section dark" id="contact">
-    <h2>Get in Touch</h2>
-    <p>
-      Ready to elevate your business? Contact us today to
-      discuss how we can help you achieve your objectives.
-    </p>
-    <a href="mailto:contact@asjassociates.com" class="btn btn-primary">
-      Contact Us
-    </a>
-  </section>
+    <!-- CERTIFICATIONS TAB -->
+    <div id="certifications" class="tab">
+      <div class="section-box certifications">
+        <h2>Certifications</h2>
+        <p><strong>Maryland MDOT – MBE Certified</strong></p>
+        <img src="assets/certifications/certifications2024.jpg" alt="Certifications">
+        <img src="assets/certifications/cats-plus-logo.png" alt="CATS Plus">
+      </div>
+    </div>
+
+    <!-- CLIENTS TAB -->
+    <div id="clients" class="tab">
+      <div class="section-box">
+        <h2>Our Clients</h2>
+        <div class="clients">
+          <div class="client-card">ALTA IT Services</div>
+          <div class="client-card">SYSTEM ONE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT TAB -->
+    <div id="contact" class="tab">
+      <div class="section-box form-box">
+        <h2>Contact ASJ Associates</h2>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="status"></p>
+      </div>
+    </div>
+
+  </div>
 
   <!-- FOOTER -->
   <footer>
-    © 2025 ASJ ASSOCIATES Solutions. All rights reserved.
+    © 2026 ASJ Associates. All rights reserved.
   </footer>
 
   <!-- JS -->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
