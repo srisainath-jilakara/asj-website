@@ -1,28 +1,19 @@
-function openTab(id){
-document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-document.getElementById(id).classList.add('active');
+function openTab(tabId) {
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  const target = document.getElementById(tabId);
+  if (target) target.classList.add('active');
 }
 
+// Contact form mock submit
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
 
-// Contact Form Handler (API Ready)
-document.addEventListener('DOMContentLoaded',()=>{
-const form = document.getElementById('contactForm');
-if(!form) return;
-
-
-form.addEventListener('submit',async(e)=>{
-e.preventDefault();
-const status=document.getElementById('status');
-status.innerText='Sending...';
-
-
-// 🔌 API endpoint integration here
-// fetch('/api/contact', { method:'POST', body: new FormData(form) })
-
-
-setTimeout(()=>{
-status.innerText='Message sent successfully!';
-form.reset();
-},1000);
-});
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("status").innerText = "Message sent successfully!";
+    form.reset();
+  });
 });
