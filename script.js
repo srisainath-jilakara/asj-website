@@ -1,20 +1,28 @@
-const sections = document.querySelectorAll('.section');
+function openTab(id){
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
 
-sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(50px)';
-  section.style.transition = '0.8s ease';
-  observer.observe(section);
+// Contact Form Handler (API Ready)
+document.addEventListener('DOMContentLoaded',()=>{
+const form = document.getElementById('contactForm');
+if(!form) return;
+
+
+form.addEventListener('submit',async(e)=>{
+e.preventDefault();
+const status=document.getElementById('status');
+status.innerText='Sending...';
+
+
+// 🔌 API endpoint integration here
+// fetch('/api/contact', { method:'POST', body: new FormData(form) })
+
+
+setTimeout(()=>{
+status.innerText='Message sent successfully!';
+form.reset();
+},1000);
+});
 });
