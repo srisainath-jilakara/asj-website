@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ASJ Associates | Software Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>ASJ Associates | Software Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="ASJ Associates delivers business intelligence, web services, and software solutions.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div class="logo">ASJ <span>Associates</span></div>
+
+  <div class="logo">
+    <img src="./assets/logo/asj-logo.png" alt="ASJ Logo">
+    <span>ASJ Associates</span>
+  </div>
 
   <div class="nav-links">
     <a onclick="openTab('about')">About</a>
@@ -26,128 +26,128 @@
     <a onclick="openTab('clients')">Clients</a>
     <a onclick="openTab('contact')">Contact</a>
   </div>
+
 </div>
 
-<!-- CONTAINER -->
+<!-- MAIN CONTAINER -->
 <div class="container">
 
-  <!-- ABOUT TAB -->
-  <div id="about" class="tab active">
-    <div class="section-box">
+<!-- ABOUT -->
+<div id="about" class="tab active">
+<div class="section-box">
 
-      <h2>About ASJ Associates</h2>
+<h2>About ASJ Associates</h2>
 
-      <p class="about-text">
-        ASJ Associates is a technology-driven firm delivering innovative software solutions,
-        business intelligence, and digital transformation services. We help organizations
-        modernize, scale, and succeed with secure and reliable systems.
-      </p>
+<p class="about-text">
+ASJ Associates delivers innovative software solutions, business intelligence,
+and digital transformation services helping organizations scale securely.
+</p>
 
-      <!-- Landing Cards -->
-      <div class="landing-boxes">
+<div class="landing-boxes">
 
-        <div class="landing-card">
-          <h3>Our Mission</h3>
-          <p>
-            To offer exceptional solutions that empower businesses to grow and succeed
-            in a competitive landscape.
-          </p>
-        </div>
+<div class="landing-card">
+<h3>Our Mission</h3>
+<p>To offer exceptional solutions that empower businesses to grow and succeed in a competitive landscape.</p>
+</div>
 
-        <div class="landing-card">
-          <h3>What We Offer</h3>
-          <ul>
-            <li>Custom consulting services</li>
-            <li>Technology integration and support</li>
-            <li>Business process optimization</li>
-            <li>Industry-specific solutions</li>
-          </ul>
-        </div>
+<div class="landing-card">
+<h3>What We Offer</h3>
+<ul>
+<li>Custom consulting services</li>
+<li>Technology integration and support</li>
+<li>Business process optimization</li>
+<li>Industry-specific solutions</li>
+</ul>
+</div>
 
-        <div class="landing-card">
-          <h3>Why Choose Us?</h3>
-          <ul>
-            <li>Experienced and dedicated team</li>
-            <li>Proven track record of success</li>
-            <li>Client-focused approach</li>
-            <li>Innovative and customized solutions</li>
-          </ul>
-        </div>
+<div class="landing-card">
+<h3>Why Choose Us?</h3>
+<ul>
+<li>Experienced and dedicated team</li>
+<li>Proven track record of success</li>
+<li>Client-focused approach</li>
+<li>Innovative customized solutions</li>
+</ul>
+</div>
 
-        <div class="landing-card">
-          <h3>Get in Touch</h3>
-          <p>
-            Ready to elevate your business? Contact us today to learn how we can help you
-            achieve your objectives.
-          </p>
-        </div>
+<div class="landing-card">
+<h3>Get in Touch</h3>
+<p>Ready to elevate your business? Contact us today to achieve your objectives.</p>
+</div>
 
-      </div>
+</div>
+</div>
+</div>
 
-    </div>
-  </div>
+<!-- SERVICES -->
+<div id="services" class="tab">
+<div class="section-box">
 
-  <!-- SERVICES -->
-  <div id="services" class="tab">
-    <div class="section-box">
-      <h2>Services</h2>
+<h2>Services</h2>
 
-      <div class="cards">
-        <div class="card">Business Intelligence</div>
-        <div class="card">Web Services</div>
-        <div class="card">Technology Integration</div>
-        <div class="card">Software Development</div>
-      </div>
-    </div>
-  </div>
+<div class="cards">
+<div class="card">Business Intelligence</div>
+<div class="card">Web Services</div>
+<div class="card">Technology Integration</div>
+<div class="card">Software Development</div>
+</div>
 
-  <!-- CERTIFICATIONS -->
-  <div id="certifications" class="tab">
-    <div class="section-box certifications">
-      <h2>Certifications</h2>
-      <p><strong>Maryland MDOT – MBE Certified</strong></p>
+</div>
+</div>
 
-      <img src="./assets/certifications/mdot-mbe.png">
-      <img src="./assets/certifications/cats-plus.png">
-    </div>
-  </div>
+<!-- CERTIFICATIONS -->
+<div id="certifications" class="tab">
+<div class="section-box certifications">
 
-  <!-- CLIENTS -->
-  <div id="clients" class="tab">
-    <div class="section-box">
-      <h2>Our Clients</h2>
+<h2>Certifications</h2>
+<p><strong>Maryland MDOT – MBE Certified</strong></p>
 
-      <div class="clients">
-        <div class="client-card">ALTA IT Services</div>
-        <div class="client-card">SYSTEM ONE</div>
-      </div>
-    </div>
-  </div>
+<img src="./assets/certifications/mdot-mbe.png">
+<img src="./assets/certifications/cats-plus.png">
 
-  <!-- CONTACT -->
-  <div id="contact" class="tab">
-    <div class="section-box form-box">
-      <h2>Contact ASJ Associates</h2>
+</div>
+</div>
 
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+<!-- CLIENTS -->
+<div id="clients" class="tab">
+<div class="section-box">
 
-        <button type="submit">Send Message</button>
-      </form>
+<h2>Our Clients</h2>
 
-      <p id="status"></p>
-    </div>
-  </div>
+<div class="clients">
+<div class="client-card">ALTA IT Services</div>
+<div class="client-card">SYSTEM ONE</div>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="tab">
+<div class="section-box form-box">
+
+<h2>Contact ASJ Associates</h2>
+
+<form id="contactForm">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Subject">
+<textarea rows="4" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<p id="status"></p>
+
+</div>
+</div>
 
 </div>
 
 <footer>
-  © 2026 ASJ Associates. All rights reserved.
+© 2026 ASJ Associates. All rights reserved.
 </footer>
 
 <script src="./js/script.js"></script>
+
 </body>
 </html>
