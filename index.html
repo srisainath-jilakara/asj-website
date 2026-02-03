@@ -12,22 +12,34 @@
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
+<header class="navbar">
 
   <div class="logo">
     <img src="./assets/logo/asj-logo.png" alt="ASJ Logo">
     <span>ASJ Associates</span>
   </div>
 
-  <div class="nav-links">
+  <nav class="nav-links">
     <a onclick="openTab('about')">About</a>
     <a onclick="openTab('services')">Services</a>
     <a onclick="openTab('certifications')">Certifications</a>
     <a onclick="openTab('clients')">Clients</a>
     <a onclick="openTab('contact')">Contact</a>
-  </div>
+  </nav>
 
-</div>
+</header>
+
+
+<!-- HERO BANNER -->
+<section class="hero">
+
+  <img src="./assets/logo/asj-logo.png" class="hero-logo">
+
+  <h1>Software Solutions</h1>
+  <p>Building scalable and reliable digital systems</p>
+
+</section>
+
 
 <!-- MAIN CONTAINER -->
 <div class="container">
@@ -39,112 +51,49 @@
 <h2>About ASJ Associates</h2>
 
 <p class="about-text">
-ASJ Associates delivers innovative software solutions, business intelligence,
-and digital transformation services helping organizations scale securely.
+ASJ Associates delivers innovative software solutions and digital transformation services.
 </p>
 
 <div class="landing-boxes">
 
 <div class="landing-card">
 <h3>Our Mission</h3>
-<p>To offer exceptional solutions that empower businesses to grow and succeed in a competitive landscape.</p>
+<p>Empowering businesses with exceptional technology solutions.</p>
 </div>
 
 <div class="landing-card">
 <h3>What We Offer</h3>
 <ul>
 <li>Custom consulting services</li>
-<li>Technology integration and support</li>
-<li>Business process optimization</li>
-<li>Industry-specific solutions</li>
+<li>Technology integration</li>
+<li>Business optimization</li>
+<li>Industry solutions</li>
 </ul>
 </div>
 
 <div class="landing-card">
 <h3>Why Choose Us?</h3>
 <ul>
-<li>Experienced and dedicated team</li>
-<li>Proven track record of success</li>
+<li>Experienced team</li>
+<li>Proven success record</li>
 <li>Client-focused approach</li>
-<li>Innovative customized solutions</li>
+<li>Innovative solutions</li>
 </ul>
 </div>
 
 <div class="landing-card">
 <h3>Get in Touch</h3>
-<p>Ready to elevate your business? Contact us today to achieve your objectives.</p>
+<p>Contact us to elevate your business solutions.</p>
 </div>
 
 </div>
-</div>
-</div>
-
-<!-- SERVICES -->
-<div id="services" class="tab">
-<div class="section-box">
-
-<h2>Services</h2>
-
-<div class="cards">
-<div class="card">Business Intelligence</div>
-<div class="card">Web Services</div>
-<div class="card">Technology Integration</div>
-<div class="card">Software Development</div>
-</div>
-
-</div>
-</div>
-
-<!-- CERTIFICATIONS -->
-<div id="certifications" class="tab">
-<div class="section-box certifications">
-
-<h2>Certifications</h2>
-<p><strong>Maryland MDOT – MBE Certified</strong></p>
-
-<img src="./assets/certifications/mdot-mbe.png">
-<img src="./assets/certifications/cats-plus.png">
-
-</div>
-</div>
-
-<!-- CLIENTS -->
-<div id="clients" class="tab">
-<div class="section-box">
-
-<h2>Our Clients</h2>
-
-<div class="clients">
-<div class="client-card">ALTA IT Services</div>
-<div class="client-card">SYSTEM ONE</div>
-</div>
-
-</div>
-</div>
-
-<!-- CONTACT -->
-<div id="contact" class="tab">
-<div class="section-box form-box">
-
-<h2>Contact ASJ Associates</h2>
-
-<form id="contactForm">
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="text" placeholder="Subject">
-<textarea rows="4" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-
-<p id="status"></p>
-
 </div>
 </div>
 
 </div>
 
 <footer>
-© 2026 ASJ Associates. All rights reserved.
+© 2026 ASJ Associates
 </footer>
 
 <script src="./js/script.js"></script>
