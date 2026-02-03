@@ -2,11 +2,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-html, body{
-  height:100%;
+  font-family:'Montserrat', sans-serif;
 }
 
 body{
@@ -14,6 +10,7 @@ body{
   color:#1f2937;
   display:flex;
   flex-direction:column;
+  min-height:100vh;
 }
 
 /* Navbar */
@@ -24,7 +21,6 @@ body{
   padding:20px 60px;
   background:#0f172a;
   color:white;
-  flex-shrink:0;
 }
 
 .logo{
@@ -38,9 +34,8 @@ body{
 
 .nav-links a{
   margin-left:25px;
-  cursor:pointer;
-  font-weight:500;
   color:#e5e7eb;
+  cursor:pointer;
   text-decoration:none;
 }
 
@@ -53,19 +48,14 @@ body{
   max-width:1200px;
   margin:60px auto;
   padding:0 20px;
-  flex:1;   /* 🔥 pushes footer to bottom */
+  flex:1;
 }
 
 /* Tabs */
-.tab{
-  display:none;
-}
+.tab{ display:none; }
+.tab.active{ display:block; }
 
-.tab.active{
-  display:block;
-}
-
-/* Section box */
+/* Section */
 .section-box{
   background:white;
   padding:50px;
@@ -73,7 +63,37 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* Cards */
+/* Landing Boxes */
+.landing-boxes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.landing-card{
+  background:linear-gradient(135deg,#f8fafc,#eef2ff);
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  transition:0.3s ease;
+}
+
+.landing-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.landing-card h3{
+  margin-bottom:15px;
+}
+
+.landing-card ul{
+  padding-left:18px;
+  line-height:1.8;
+}
+
+/* Services Cards */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -87,7 +107,6 @@ body{
   border-radius:12px;
   text-align:center;
   font-weight:600;
-  box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* Clients */
@@ -105,9 +124,13 @@ body{
 }
 
 /* Certifications */
+.certifications{
+  text-align:center;
+}
+
 .certifications img{
-  max-width:180px;
-  margin:20px 20px 0 0;
+  max-height:80px;
+  margin:20px;
 }
 
 /* Form */
@@ -122,7 +145,6 @@ body{
   padding:12px;
   border-radius:8px;
   border:1px solid #cbd5e1;
-  font-size:14px;
 }
 
 .form-box button{
@@ -132,30 +154,11 @@ body{
   border:none;
   border-radius:8px;
   cursor:pointer;
-  font-weight:600;
 }
 
-.form-box button:hover{
-  background:#020617;
-}
-
-.certifications{
-  text-align:center;
-}
-
-.certifications img{
-  max-height:80px;
-  margin:20px;
-  object-fit:contain;
-  filter:drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-}
-
-
-/* Footer */
 footer{
   text-align:center;
   padding:20px;
   background:#0f172a;
   color:white;
-  flex-shrink:0;
 }
