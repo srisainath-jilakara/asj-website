@@ -1,19 +1,10 @@
-function openTab(tabId) {
-  const tabs = document.querySelectorAll('.tab');
-  tabs.forEach(tab => tab.classList.remove('active'));
+function openTab(tabId){
 
-  document.getElementById(tabId).classList.add('active');
+  document.querySelectorAll('.tab')
+  .forEach(tab => tab.classList.remove('active'));
+
+  document.getElementById(tabId)
+  .classList.add('active');
+
+  window.scrollTo({top:600,behavior:'smooth'});
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-
-  if(form){
-    form.addEventListener("submit", function(e){
-      e.preventDefault();
-      document.getElementById("status").innerText =
-        "Message sent successfully!";
-      form.reset();
-    });
-  }
-});
