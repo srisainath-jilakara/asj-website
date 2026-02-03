@@ -1,10 +1,6 @@
 function openTab(tabId){
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
 
-  document.querySelectorAll('.tab')
-  .forEach(tab => tab.classList.remove('active'));
-
-  document.getElementById(tabId)
-  .classList.add('active');
-
-  window.scrollTo({top:600,behavior:'smooth'});
+  document.getElementById(tabId).classList.add('active');
 }
