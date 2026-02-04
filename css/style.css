@@ -3,10 +3,13 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
   background: linear-gradient(180deg, #0b0b0b, #141414);
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 /* NAVBAR */
@@ -23,8 +26,8 @@ body {
 }
 
 .logo-wrap img {
-  height: 70px;
-  display: block;
+  height: 10vh; /* 10% of the viewport height */
+  width: auto;
 }
 
 /* NAV LINKS */
@@ -141,4 +144,7 @@ footer {
   text-align: center;
   font-size: 14px;
   color: #777;
+}
+main.container {
+  flex: 1;
 }
