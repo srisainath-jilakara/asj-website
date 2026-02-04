@@ -1,87 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ASJ Associates</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>ASJ Associates | Software Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="assets/favicon.png">
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/logo/favicon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
-  <img src="assets/asj-logo.png" alt="ASJ Logo" class="logo">
+  <div class="logo-wrap">
+    <img src="assets/logo/asj-logo.png" alt="ASJ Associates Logo">
+  </div>
 
-  <nav>
+  <nav class="nav-links">
     <a onclick="openTab('about')">About</a>
     <a onclick="openTab('services')">Services</a>
+    <a onclick="openTab('certifications')">Certifications</a>
     <a onclick="openTab('clients')">Clients</a>
     <a onclick="openTab('contact')">Contact</a>
   </nav>
 </header>
 
-<main>
+<!-- MAIN -->
+<main class="container">
 
-<section id="about" class="tab active">
-  <h1>Software Solutions That Scale</h1>
-  <p class="subtitle">
-    ASJ Associates delivers modern software, business intelligence,
-    and enterprise technology solutions.
-  </p>
-</section>
+  <!-- ABOUT -->
+  <section id="about" class="tab active">
+    <h1>Software Solutions That Scale</h1>
+    <p class="subtitle">
+      ASJ Associates delivers modern software, business intelligence,
+      and enterprise technology solutions.
+    </p>
 
-<section id="services" class="tab">
-  <h2>Our Services</h2>
+    <div class="landing-boxes">
+      <div class="landing-card">
+        <h3>Our Mission</h3>
+        <p>To empower businesses with reliable and scalable software solutions.</p>
+      </div>
 
-  <div class="services-grid">
+      <div class="landing-card">
+        <h3>What We Offer</h3>
+        <ul>
+          <li>Custom software solutions</li>
+          <li>Technology integration</li>
+          <li>Process optimization</li>
+          <li>Industry-focused delivery</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <img src="assets/business_intelligence.jpeg" alt="Business Intelligence">
-      <h3>Business Intelligence</h3>
+      <div class="landing-card">
+        <h3>Why Choose Us</h3>
+        <ul>
+          <li>Experienced engineering teams</li>
+          <li>Proven delivery track record</li>
+          <li>Client-first approach</li>
+          <li>Scalable architectures</li>
+        </ul>
+      </div>
+
+      <div class="landing-card">
+        <h3>Get in Touch</h3>
+        <p>Ready to elevate your business? Let’s build something impactful.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      <img src="assets/it_consulting.jpeg" alt="IT Consulting">
-      <h3>IT Consulting</h3>
+  <!-- SERVICES -->
+  <section id="services" class="tab">
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="assets/services/business_intelligence.jpeg" alt="Business Intelligence">
+        <h3>Business Intelligence</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="assets/services/web_services.png" alt="Web Services">
+        <h3>Web Services</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="assets/services/technology_integration.png" alt="Technology Integration">
+        <h3>Technology Integration</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="assets/services/it_consulting.jpeg" alt="IT Consulting">
+        <h3>IT Consulting</h3>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      <img src="assets/technology_integration.png" alt="Technology Integration">
-      <h3>Technology Integration</h3>
-    </div>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="tab">
+    <h2>Certifications</h2>
+    <p><strong>Maryland MDOT – MBE Certified</strong></p>
+  </section>
 
-    <div class="service-card">
-      <img src="assets/web_services.png" alt="Web Services">
-      <h3>Web Services</h3>
-    </div>
+  <!-- CLIENTS -->
+  <section id="clients" class="tab">
+    <h2>Our Clients</h2>
+    <ul class="clients">
+      <li>ALTA IT Services</li>
+      <li>System One</li>
+    </ul>
+  </section>
 
-  </div>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="tab">
+    <h2>Contact Us</h2>
 
-<section id="clients" class="tab">
-  <h2>Our Clients</h2>
-  <ul class="clients">
-    <li>ALTA IT Services</li>
-    <li>System One</li>
-  </ul>
-</section>
+    <form id="contactForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-<section id="contact" class="tab">
-  <h2>Contact Us</h2>
-
-  <form id="contactForm">
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-
-  <p id="status"></p>
-</section>
+    <p id="status"></p>
+  </section>
 
 </main>
 
