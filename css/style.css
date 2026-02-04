@@ -137,6 +137,51 @@ button {
   cursor: pointer;
 }
 
+/* CERTIFICATIONS SECTION */
+#certifications {
+  background: #1a1a1a; /* professional dark background */
+  padding: 60px 40px;
+  border-radius: 12px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.cert-card {
+  background: #252525; /* card background */
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+/* Section Heading */
+#certifications h2 {
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
 /* FOOTER */
 footer {
   background: #000;
