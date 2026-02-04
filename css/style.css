@@ -91,14 +91,13 @@ h2 {
 /* SERVICES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* This ensures exactly 2 columns on desktop */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 30px;
 }
-
 .service-card {
-  background: #181818;
-  border-radius: 14px;
-  overflow: hidden;
+  /* This targets two items per row minus the gap */
+  flex: 1 1 calc(50% - 30px); 
 }
 
 .service-card img {
@@ -192,4 +191,10 @@ footer {
 }
 main.container {
   flex: 1;
+}
+@media (max-width: 600px) {
+  .services-grid {
+    /* This forces 1 column on mobile devices */
+    grid-template-columns: 1fr;
+  }
 }
