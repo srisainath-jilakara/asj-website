@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ASJ Associates | Software Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="./assets/logo/favicon.ico">
+  <link rel="icon" href="assets/logo/favicon.ico" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="logo-box">
-    <img src="./assets/logo/asj-logo.png" alt="ASJ Logo">
+  <div class="nav-left">
+    <img src="assets/logo/asj-logo.png" class="nav-logo" alt="ASJ Logo">
   </div>
 
-  <nav class="nav-links">
+  <nav class="nav-right">
     <a onclick="openTab('about')">About</a>
     <a onclick="openTab('services')">Services</a>
     <a onclick="openTab('certifications')">Certifications</a>
@@ -28,35 +28,29 @@
   </nav>
 </header>
 
-<!-- MAIN CONTAINER -->
-<main class="container">
+<!-- CONTENT -->
+<main>
 
   <!-- ABOUT -->
   <section id="about" class="tab active">
-    <div class="section-box hero">
-      <img class="hero-logo" src="./assets/logo/asj-logo.png" alt="ASJ Associates">
+    <div class="section">
+      <h1>ASJ Associates</h1>
+      <p class="subtitle">Modern Software Solutions</p>
 
-      <h1>Software Solutions That Scale</h1>
-      <p>
-        ASJ Associates delivers modern software, business intelligence,
-        and enterprise technology solutions designed for growth, security,
-        and performance.
-      </p>
-
-      <div class="landing-boxes">
-        <div class="landing-card">
-          <h3>Mission</h3>
-          <p>Empowering businesses with reliable, scalable technology.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p>Deliver scalable, secure, and innovative software solutions.</p>
         </div>
 
-        <div class="landing-card">
-          <h3>Expertise</h3>
-          <p>Enterprise software, integrations, analytics & platforms.</p>
+        <div class="card">
+          <h3>What We Do</h3>
+          <p>Enterprise systems, web platforms, and data-driven applications.</p>
         </div>
 
-        <div class="landing-card">
-          <h3>Approach</h3>
-          <p>Client-first, security-driven, future-ready solutions.</p>
+        <div class="card">
+          <h3>Why ASJ</h3>
+          <p>Precision engineering, reliability, and long-term value.</p>
         </div>
       </div>
     </div>
@@ -64,70 +58,54 @@
 
   <!-- SERVICES -->
   <section id="services" class="tab">
-    <div class="section-box">
-      <h2>Our Services</h2>
-
-      <div class="services-grid">
-
-        <div class="service-card">
-          <img src="./assets/services/business_intelligence.jpeg">
-          <h3>Business Intelligence</h3>
-        </div>
-
-        <div class="service-card">
-          <img src="./assets/services/it_consulting.jpeg">
-          <h3>IT Consulting</h3>
-        </div>
-
-        <div class="service-card">
-          <img src="./assets/services/technology_integration.png">
-          <h3>Technology Integration</h3>
-        </div>
-
-        <div class="service-card">
-          <img src="./assets/services/web_services.png">
-          <h3>Web Services</h3>
-        </div>
-
+    <div class="section">
+      <h2>Services</h2>
+      <div class="cards">
+        <div class="card">Business Intelligence</div>
+        <div class="card">Web Services</div>
+        <div class="card">Technology Integration</div>
+        <div class="card">Custom Software Development</div>
       </div>
     </div>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section id="certifications" class="tab">
-    <div class="section-box">
+    <div class="section">
       <h2>Certifications</h2>
       <p><strong>Maryland MDOT – MBE Certified</strong></p>
 
-      <div class="cert-images">
-        <img src="./assets/certifications/mdot-mbe.png">
-        <img src="./assets/certifications/cats-plus.png">
+      <div class="cert-logos">
+        <img src="assets/certifications/mdot-mbe.png" alt="MDOT MBE">
+        <img src="assets/certifications/cats-plus.png" alt="CATS Plus">
       </div>
     </div>
   </section>
 
   <!-- CLIENTS -->
   <section id="clients" class="tab">
-    <div class="section-box">
-      <h2>Our Clients</h2>
-      <div class="clients">
-        <div class="client-card">ALTA IT Services</div>
-        <div class="client-card">System One</div>
+    <div class="section">
+      <h2>Clients</h2>
+      <div class="cards">
+        <div class="card">ALTA IT Services</div>
+        <div class="card">SYSTEM ONE</div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="tab">
-    <div class="section-box">
+    <div class="section contact-wrapper">
       <h2>Contact Us</h2>
 
-      <form>
+      <form id="contactForm">
         <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea rows="4" placeholder="Message"></textarea>
+        <input type="email" placeholder="Email Address" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+
+      <p id="status"></p>
     </div>
   </section>
 
@@ -137,6 +115,6 @@
   © 2026 ASJ Associates. All rights reserved.
 </footer>
 
-<script src="./js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
