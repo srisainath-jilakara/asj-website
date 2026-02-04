@@ -11,41 +11,45 @@ body {
 
 /* NAVBAR */
 .navbar {
-  height: 90px;
-  padding: 0 60px;
+  position: sticky;
+  top: 0;
+  height: 96px;
   background: #000;
+  padding: 0 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  top: 0;
   z-index: 100;
 }
 
-.logo {
-  height: 70px;   /* INCREASED */
-  object-fit: contain;
+.logo-wrap img {
+  height: 70px;
+  display: block;
 }
 
 /* NAV LINKS */
-nav a {
-  margin-left: 30px;
+.nav-links a {
+  margin-left: 28px;
+  font-weight: 500;
   cursor: pointer;
-  font-size: 15px;
   color: #e5e5e5;
   text-decoration: none;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #e50914;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px;
 }
 
 /* TABS */
 .tab {
   display: none;
-  padding: 150px 80px 80px;
-  min-height: calc(100vh - 150px);
 }
 
 .tab.active {
@@ -54,7 +58,7 @@ nav a:hover {
 
 /* TEXT */
 h1 {
-  font-size: 48px;
+  font-size: 44px;
 }
 
 h2 {
@@ -63,9 +67,22 @@ h2 {
 }
 
 .subtitle {
-  font-size: 18px;
+  max-width: 720px;
   color: #b3b3b3;
-  max-width: 700px;
+}
+
+/* LANDING CARDS */
+.landing-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.landing-card {
+  background: #181818;
+  padding: 24px;
+  border-radius: 12px;
 }
 
 /* SERVICES */
@@ -77,30 +94,19 @@ h2 {
 
 .service-card {
   background: #181818;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: scale(1.05);
 }
 
 .service-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
 
 .service-card h3 {
   padding: 16px;
-  font-size: 18px;
-}
-
-/* CLIENTS */
-.clients li {
-  font-size: 18px;
-  margin-bottom: 10px;
 }
 
 /* CONTACT */
@@ -115,7 +121,7 @@ input, textarea {
   border-radius: 6px;
   border: none;
   background: #222;
-  color: white;
+  color: #fff;
 }
 
 button {
@@ -124,16 +130,15 @@ button {
   background: #e50914;
   border: none;
   border-radius: 6px;
-  color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
-/* FOOTER (NO EXTRA SPACE) */
+/* FOOTER */
 footer {
-  padding: 14px;
-  text-align: center;
   background: #000;
-  color: #777;
+  padding: 16px;
+  text-align: center;
   font-size: 14px;
+  color: #777;
 }
