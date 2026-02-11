@@ -7,7 +7,7 @@ function openTab(tabId){
 
 // Initialize EmailJS
 (function(){
-  emailjs.init("7NQqAsC5qzEcJw1xr"); // replace
+  emailjs.init("7NQqAsC5qzEcJw1xr");
 })();
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -20,31 +20,24 @@ document.addEventListener("DOMContentLoaded", ()=>{
   form.addEventListener("submit", function(e){
     e.preventDefault();
 
-    const email = form.user_email.value.trim();
-    const message = form.message.value.trim();
-
-    if(email === "" || message === ""){
-      alert("Email and Message are required.");
-      return;
-    }
-
     submitBtn.disabled = true;
     btnText.style.display = "none";
     spinner.style.display = "inline";
 
     emailjs.sendForm(
-      "service_wix8j4i",   // replace
-      "vr4HLrXawFtAzH",  // replace
+      "service_wix8j4i",
+      "template_a5zu069",
       this
     )
-    .then(()=>{
+    .then(function(response){
       alert("Message sent successfully!");
       form.reset();
     })
-    .catch(()=>{
-      alert("Failed to send message.");
+    .catch(function(error){
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. Check console.");
     })
-    .finally(()=>{
+    .finally(function(){
       submitBtn.disabled = false;
       btnText.style.display = "inline";
       spinner.style.display = "none";
