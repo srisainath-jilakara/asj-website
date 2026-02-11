@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <meta charset="UTF-8">
   <title>ASJ Associates | Software Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -125,11 +126,26 @@
     <h2>Contact Us</h2>
 
     <form id="contactForm">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <input 
+    type="text" 
+    name="user_name" 
+    placeholder="Full Name">
+
+  <input 
+    type="email" 
+    name="user_email" 
+    placeholder="Email Address *" 
+    required>
+
+  <textarea 
+    name="message" 
+    rows="4" 
+    placeholder="Your Message *" 
+    required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
 
     <p id="status"></p>
   </section>
