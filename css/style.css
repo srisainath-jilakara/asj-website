@@ -171,6 +171,19 @@ button {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
+.clients-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.clients-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 
 /* Section Heading */
 #certifications h2 {
