@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     emailjs.sendForm(
       "service_wix8j4i",   // replace
-      "vr4HLrXawFtAzH",  // replace
+      "template_a5zu069",  // replace
       this
     )
     .then(()=>{
