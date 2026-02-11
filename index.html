@@ -125,26 +125,21 @@
   <section id="contact" class="tab">
     <h2>Contact Us</h2>
 
-    <form id="contactForm">
-  <input 
-    type="text" 
-    name="user_name" 
-    placeholder="Full Name">
+   <form id="contactForm">
+  <input type="text" name="user_name" placeholder="Full Name">
 
-  <input 
-    type="email" 
-    name="user_email" 
-    placeholder="Email Address *" 
-    required>
+  <input type="email" name="user_email" placeholder="Email Address *" required>
 
-  <textarea 
-    name="message" 
-    rows="4" 
-    placeholder="Your Message *" 
-    required></textarea>
+  <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
 
-  <button type="submit">Send Message</button>
+  <button type="submit" id="submitBtn">
+    <span id="btnText">Send Message</span>
+    <span id="spinner" style="display:none;">⏳</span>
+  </button>
 </form>
+
+<p id="status"></p>
+
 
 
     <p id="status"></p>
