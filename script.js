@@ -1,28 +1,55 @@
-function openTab(id){
-document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-document.getElementById(id).classList.add('active');
+function openTab(tabId){
+  document.querySelectorAll('.tab').forEach(tab=>{
+    tab.classList.remove('active');
+  });
+  document.getElementById(tabId).classList.add('active');
 }
 
+// Initialize EmailJS
+(function(){
+  emailjs.init("7NQqAsC5qzEcJw1xr"); // replace
+})();
 
-// Contact Form Handler (API Ready)
-document.addEventListener('DOMContentLoaded',()=>{
-const form = document.getElementById('contactForm');
-if(!form) return;
+document.addEventListener("DOMContentLoaded", ()=>{
 
+  const form = document.getElementById("contactForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const spinner = document.getElementById("spinner");
 
-form.addEventListener('submit',async(e)=>{
-e.preventDefault();
-const status=document.getElementById('status');
-status.innerText='Sending...';
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
 
+    const email = form.user_email.value.trim();
+    const message = form.message.value.trim();
 
-// 🔌 API endpoint integration here
-// fetch('/api/contact', { method:'POST', body: new FormData(form) })
+    if(email === "" || message === ""){
+      alert("Email and Message are required.");
+      return;
+    }
 
+    submitBtn.disabled = true;
+    btnText.style.display = "none";
+    spinner.style.display = "inline";
 
-setTimeout(()=>{
-status.innerText='Message sent successfully!';
-form.reset();
-},1000);
-});
+    emailjs.sendForm(
+      "service_wix8j4i",   // replace
+      "vr4HLrXawFtAzH",  // replace
+      this
+    )
+    .then(()=>{
+      alert("Message sent successfully!");
+      form.reset();
+    })
+    .catch(()=>{
+      alert("Failed to send message.");
+    })
+    .finally(()=>{
+      submitBtn.disabled = false;
+      btnText.style.display = "inline";
+      spinner.style.display = "none";
+    });
+
+  });
+
 });
