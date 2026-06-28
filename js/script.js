@@ -1,23 +1,41 @@
-function openTab(tabId){
-  document.querySelectorAll('.tab').forEach(tab=>{
+function openTab(tabId) {
+  document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.remove('active');
   });
   document.getElementById(tabId).classList.add('active');
 }
+
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+});
 
 // Initialize EmailJS
 (function(){
   emailjs.init("7NQqAsC5qzEcJw1xr");
 })();
 
-document.addEventListener("DOMContentLoaded", ()=>{
-
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
   const btnText = document.getElementById("btnText");
   const spinner = document.getElementById("spinner");
 
-  form.addEventListener("submit", function(e){
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     submitBtn.disabled = true;
@@ -29,20 +47,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
       "template_a5zu069",
       this
     )
-    .then(function(response){
+    .then(function(response) {
       alert("Message sent successfully!");
       form.reset();
     })
-    .catch(function(error){
+    .catch(function(error) {
       console.error("EmailJS Error:", error);
       alert("Failed to send message. Check console.");
     })
-    .finally(function(){
+    .finally(function() {
       submitBtn.disabled = false;
       btnText.style.display = "inline";
       spinner.style.display = "none";
     });
-
   });
-
 });

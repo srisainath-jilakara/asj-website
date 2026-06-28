@@ -24,12 +24,18 @@
     <img src="assets/logo/asj-logo.png" alt="ASJ Associates Logo">
   </div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" id="navLinks">
     <a onclick="openTab('about')">About</a>
     <a onclick="openTab('services')">Services</a>
     <a onclick="openTab('clients')">Clients</a>
     <a onclick="openTab('contact')">Contact</a>
   </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
 <!-- MAIN -->
@@ -71,19 +77,19 @@
 
       <div class="landing-card">
         <h3>Get in Touch</h3>
-        <p>Ready to elevate your business? Let’s build something impactful.</p>
+        <p>Ready to elevate your business? Let's build something impactful.</p>
       </div>
     </div>
 
     <hr style="margin:60px 0; border-color:#333;">
 
-<h2 style="text-align:center;">Certifications</h2>
+    <h2 style="text-align:center;">Certifications</h2>
 
-<div class="certifications-grid" style="margin-top:40px;">
-  <div class="cert-card">
-    <img src="assets/certifications/mdot-mbe.png" alt="MDOT MBE Certification">
-  </div>
-</div>
+    <div class="certifications-grid" style="margin-top:40px;">
+      <div class="cert-card">
+        <img src="assets/certifications/mdot-mbe.png" alt="MDOT MBE Certification">
+      </div>
+    </div>
   </section>
 
   <!-- SERVICES -->
@@ -115,32 +121,24 @@
 
   <!-- CLIENTS -->
   <section id="clients" class="tab">
-  <div class="clients-image-wrapper">
-    <img src="assets/clients/our_clients.png" alt="Our Clients">
-  </div>
-</section>
-
+    <div class="clients-image-wrapper">
+      <img src="assets/clients/our_clients.png" alt="Our Clients">
+    </div>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="tab">
     <h2>Contact Us</h2>
 
-   <form id="contactForm">
-  <input type="text" name="user_name" placeholder="Full Name">
-
-  <input type="email" name="user_email" placeholder="Email Address *" required>
-
-  <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
-
-  <button type="submit" id="submitBtn">
-    <span id="btnText">Send Message</span>
-    <span id="spinner" style="display:none;">⏳</span>
-  </button>
-</form>
-
-<p id="status"></p>
-
-
+    <form id="contactForm">
+      <input type="text" name="user_name" placeholder="Full Name">
+      <input type="email" name="user_email" placeholder="Email Address *" required>
+      <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
+      <button type="submit" id="submitBtn">
+        <span id="btnText">Send Message</span>
+        <span id="spinner" style="display:none;">⏳</span>
+      </button>
+    </form>
 
     <p id="status"></p>
   </section>
